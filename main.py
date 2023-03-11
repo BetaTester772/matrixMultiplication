@@ -9,18 +9,20 @@ C = []
 
 
 def main():
+    max = int(input("max: "))
+
     m, n, o = map(int, input("m n o\n").split())
     if m > 0 and n:
         for i in range(m):
             A.append([])
             for j in range(n):
-                A[i].append(np.random.randint(1, 10))
+                A[i].append(np.random.randint(1, max))
 
     if n > 0 and o > 0:
         for i in range(n):
             B.append([])
             for j in range(o):
-                B[i].append(np.random.randint(1, 10))
+                B[i].append(np.random.randint(1, max))
 
     if len(A) > 0 and len(B[0]) > 0:
         for i in range(len(A)):
@@ -33,8 +35,8 @@ def main():
             for k in range(len(B[0])):
                 C[i][k] += A[i][j] * B[j][k]
 
-    print(np.array(A))
-    print(np.array(B))
+    print(np.array(A), end='\n\n')
+    print(np.array(B), end='\n\n')
     print(np.array(C))
 
 
