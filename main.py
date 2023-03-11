@@ -8,9 +8,7 @@ B = []
 C = []
 
 
-def main():
-    max = int(input("max: "))
-
+def main(max=10):
     m, n, o = map(int, input("m n o\n").split())
     if m > 0 and n:
         for i in range(m):
@@ -41,4 +39,5 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
+    max = int(input("max: "))
+    main(max)
