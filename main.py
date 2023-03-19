@@ -1,10 +1,10 @@
 import numpy as np
 
-# can be set
+# editable
 A = []
 B = []
 
-# can't be set
+# uneditable(for result)
 C = []
 
 
